@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Memory Game <span></h1>        
+    </header>
+    <main>
+        <div class="modal" id="gameOverModal">
+            <div class="modal-content">                
+                <div class="modal-header">
+                    <h2>Start</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <form>
+                            <div class="form-group">
+                              <label>Select number of players</label>
+                              <select class="form-control" id="exampleFormControlSelect1">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                              </select>
+                            </div>
+                          </form>                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="brown-button" onClick="playAgain()">Play</button>
+                </div>
+            </div>
+        </div>  
+        <section>
+            <div class="game-status-details">
+                
+                <span class="move-counter" id="moveCounter"></span>                
+               
+                <p>Score player ONE: <span id="score1">0</span></p>
+                <p>Score player TWO: <span id="score2">0</span></p>
+                <p>Score player THREE: <span id="score3">0</span></p>
+                <p>Score player FOUR: <span id="score4">0</span></p>
+                <p>Now is playing Player: <span id="PlayerNow"></span></p>
+                <p>The WINNER is player: <span id="winner"></span></p>
+                
+            </div>
+            <table class="game-board">
+                <tbody class="game-grid">
+                    <tr class="game-grid-row">
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog1.jpg" alt="cake1">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog2.jpg" alt="cake2">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog3.jpg" alt="cake3">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog4.jpg" alt="cake4">
+                        </td>
+                    </tr>
+                    <tr class="game-grid-row">
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog5.jpg" alt="cake5">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog6.jpg" alt="cake6">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog7.jpg" alt="cake7">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog8.jpg" alt="cake8">
+                        </td>
+                    </tr>
+                    <tr class="game-grid-row">
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog1.jpg" alt="cake1">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog2.jpg" alt="cake2">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog3.jpg" alt="cake3">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog4.jpg" alt="cake4">
+                        </td>
+                    </tr>
+                    <tr class="game-grid-row">
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog5.jpg" alt="cake5">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog6.jpg" alt="cake6">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog7.jpg" alt="cake7">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/dog8.jpg" alt="cake8">
+                        </td>
+                    </tr>
+                </tbody>               
+            </table>
+            <div class="restart-button-div">
+                <button class="brown-button" id="gameOverModal" onclick="Reset()",  aria-label="restart game">RESTART</button>
+            </div>
+        </section>
+        
+                          
+    </main>    
+    <script src="scrypt.js"></script>  
+   
+</body>
+</html>
